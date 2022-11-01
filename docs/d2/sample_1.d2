@@ -1,0 +1,39 @@
+runner: JobRunner {
+  shape: class
+
+  -start: datetime
+  -end: datetime
+  -running_server: string
+  -threads: int
+  -manager: JobsManager
+  +pipeline: Pipeline
+
+  +setPipeline(Pipeline p): void
+  +kickoff(threads int): bool
+}
+
+jobsUI: JobRunner UI {
+  kickoff
+  halt
+}
+
+batch: Batch {
+  manager: BatchManager {
+    shape: class
+    -num: int
+    -timeout: int
+    -pid
+
+    +getStatus(): Enum
+    +getJobs(): "Job[]"
+    +setTimeout(seconds int)
+  }
+  systemd: Systemd
+  selenium: Selenium
+
+  systemd -> manager: Ensure alive
+  manager -> selenium: Run job
+}
+
+jobsUI -> runner: Kick off
+runner -> batch.manager: Queue jobs

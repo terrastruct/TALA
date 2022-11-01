@@ -1,0 +1,31 @@
+SSR: Server side render {
+  templates: User defined templates
+
+  tests: Validation tests
+
+  engine: Rendering Engine\n API {
+    ingestion: Ingestion module {
+      shape: hexagon
+    }
+    fetch: Data fetching module {
+      shape: hexagon
+    }
+    schema: Schema version module {
+      shape: hexagon
+    }
+  }
+  next: NextJS
+  db: Data
+
+  templates -> engine.ingestion
+  engine.fetch <-> db: Integrate user data
+  engine.schema <-> db: Get version
+
+  engine <-> tests
+}
+
+build: Final build {
+  html: Rendered HTML
+}
+
+SSR.engine -> SSR.next -> build.html

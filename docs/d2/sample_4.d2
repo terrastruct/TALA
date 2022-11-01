@@ -1,0 +1,48 @@
+payment
+
+AWS {
+  orchestrator: Orchestrator
+  airflow: Apache Airflow {
+    queue1: Queue 1 {
+      shape: queue
+    }
+    queue2: Queue 2 {
+      shape: queue
+    }
+    queue3: Queue 3 {
+      shape: queue
+    }
+    queue4: Queue 4 {
+      shape: queue
+    }
+  }
+
+  orchestrator -> airflow.queue1
+  orchestrator -> airflow.queue2
+  orchestrator -> airflow.queue3
+  orchestrator -> airflow.queue4
+}
+
+payment -> AWS.orchestrator
+
+backup: Data backup
+
+AWS.airflow.queue3 -> backup
+AWS.airflow.queue4 -> backup
+
+data: Data warehouse
+
+AWS.airflow.queue1 -> data
+AWS.airflow.queue2 -> data
+
+local: On-prem backups {
+  queue1: Queue 1 {
+    shape: queue
+  }
+  queue2: Queue 2 {
+    shape: queue
+  }
+}
+
+backup -> local.queue1
+backup -> local.queue2

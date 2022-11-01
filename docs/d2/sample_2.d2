@@ -1,0 +1,44 @@
+logs: {
+  shape: page
+  style.multiple: true
+}
+user: AT&T Customer {shape: person}
+network: Network {
+  tower: Cell Tower {
+    satellites: {
+      shape: stored_data
+      style.multiple: true
+    }
+    transmitter
+
+    satellites -> transmitter
+    satellites -> transmitter
+    satellites -> transmitter
+  }
+  processor: Data Processor {
+    storage: Storage {
+      shape: cylinder
+      style.multiple: true
+    }
+  }
+  portal: Online Portal {
+    UI
+  }
+
+  tower.transmitter -> processor: phone logs
+}
+server: API Server
+
+user -> network.tower: Make call
+network.processor -> server
+network.processor -> server
+network.processor -> server
+
+server -> logs
+server -> logs
+server -> logs: persist
+
+server -> network.portal.UI: display
+user -> network.portal.UI: access {
+  style.stroke-dash: 3
+}
