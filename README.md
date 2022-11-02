@@ -71,9 +71,9 @@ don't want to create an account, you can purchase a personal license key for TAL
 allows you to run TALA forever with access to updates for 12 months
 [here](https://buy.stripe.com/bIYeXL3cT2Lr23e5ko).
 
-### Troubleshooting
+## Troubleshooting
 
-#### TALA not found
+### TALA not found
 
 ```sh
 which d2talaplugin
@@ -87,7 +87,7 @@ echo $PATH
 
 Please move the downloaded binary to one of those locations.
 
-#### License warning prints even with API token
+### License warning prints even with API token
 
 In the same terminal that you're running `d2` on, run
 
@@ -99,7 +99,7 @@ If it is not found, then your environment variable has not been set in your shel
 sure you add it to the appropriate shell config file and `source` it in the running
 terminal.
 
-#### Other
+### Other
 
 Please open an Issue describing what you're running into and we're happy to help. If you'd
 like to remain anonymous/private, feel free to email us at info@terrastruct.com
