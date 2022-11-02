@@ -13,9 +13,6 @@ To compare TALA with other layout engines, please visit
 
 ## Installation
 
-TALA is freely installable and locally runnable for evaluation. You'll need an API token
-from your Terrastruct account to run it out of evaluation mode.
-
 ### Prerequisites
 
 You should install D2 first. TALA is installed as a standalone binary in your path which
@@ -60,12 +57,19 @@ D2_LAYOUT=tala d2 in.d2 out.svg
 
 You may skip this step if you are just evaluating.
 
-If you have an API token from your Terrastruct account, copy and paste it into your
-environment variables. E.g.
+If you have an API token, copy and paste it into your environment variables. E.g.
 
 ```bash
 export TSTRUCT_TOKEN = "tstruct_..."
 ```
+
+## License keys
+
+TALA is freely installable and locally runnable for evaluation. You'll need an API token
+from your Terrastruct account to run it out of evaluation mode. Alternatively, if you
+don't want to create an account, you can purchase a personal license key for TALA that
+allows you to run TALA forever with access to updates for 12 months
+[here](https://buy.stripe.com/bIYeXL3cT2Lr23e5ko).
 
 ### Troubleshooting
 
@@ -99,3 +103,14 @@ terminal.
 
 Please open an Issue describing what you're running into and we're happy to help. If you'd
 like to remain anonymous/private, feel free to email us at info@terrastruct.com
+
+## FAQ
+
+### Does TALA use the internet?
+
+We do not collect telemetry or use the internet in any way except to ping to check the
+status of a license. This is only done when necessary, e.g. if you purchased a month
+subscription, TALA will ping at the end of that month and renew automatically if the
+subscription is ongoing. If you purchased a year, it won't ping for a year. The only data
+that's sent in these pings is the API token itself. No diagrams or anything else leaves
+your computer.
