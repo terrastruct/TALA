@@ -23,7 +23,7 @@ D2's plugin system calls out to.
 #### MacOS
 
 ```sh
-brew install --cask d2talaplugin
+brew install --cask d2plugin-tala
 ```
 
 #### Others
@@ -76,10 +76,10 @@ allows you to run TALA forever with access to updates for 12 months
 ### TALA not found
 
 ```sh
-which d2talaplugin
+which d2plugin-tala
 ```
 
-If this does not return a directory, then `d2talaplugin` is not in your path.
+If this does not return a directory, then `d2plugin-tala` is not in your path.
 
 ```sh
 echo $PATH
