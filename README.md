@@ -9,7 +9,7 @@ To learn more about TALA, please visit
 [https://terrastruct.com/tala](https://terrastruct.com/tala).
 
 To compare TALA with other layout engines, please visit
-[https://text-to-diagram](https://text-to-diagram).
+[https://text-to-diagram.com](https://text-to-diagram.com).
 
 ## Installation
 
