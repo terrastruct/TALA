@@ -1,6 +1,6 @@
 # TALA
 
-TALA is Terrastruct's proprietary diagram layout engine, made for
+TALA is a general-purpose diagram layout engine, made for
 [D2](https://github.com/terrastruct/d2). TALA is closed-source (for now). This repository
 is primarily for installation instructions. You can also use this repository to report
 issues, ask questions, and request features.
@@ -10,6 +10,15 @@ To learn more about TALA, please visit
 
 To compare TALA with other layout engines, please visit
 [https://text-to-diagram.com](https://text-to-diagram.com).
+
+## Rendering samples
+
+You can see the `.d2` text for these in [./docs/d2](./docs/d2). Samples are generated
+through the CLI ([./ci/generate_samples.sh](./docs/d2)).
+
+|<img src="./docs/assets/sample_1.svg" />|<img src="./docs/assets/sample_2.svg" />|<img src="./docs/assets/sample_3.svg" />|
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img src="./docs/assets/sample_4.svg" />|<img src="./docs/assets/sample_5.svg" />|<img src="./docs/assets/sample_6.svg" />|
 
 ## Installation
 
@@ -108,9 +117,13 @@ like to remain anonymous/private, feel free to email us at info@terrastruct.com
 
 ### Does TALA use the internet?
 
-We do not collect telemetry or use the internet in any way except to ping to check the
-status of a license. This is only done when necessary, e.g. if you purchased a month
-subscription, TALA will ping at the end of that month and renew automatically if the
-subscription is ongoing. If you purchased a year, it won't ping for a year. The only data
-that's sent in these pings is the API token itself. No diagrams or anything else leaves
-your computer.
+The TALA plugin do not collect telemetry or use the internet in any way except to ping to
+check the status of a license. This is only done when necessary, e.g. if you purchased a
+month subscription, TALA will ping at the start of the next month and renew automatically
+if the subscription is ongoing. If you purchased a year, it won't ping for a year. The
+  only data that's sent in these pings is the API token itself. No diagrams or anything
+  else leaves your computer.
+
+### Others
+
+Full FAQ at [https://terrastruct.com/tala](https://terrastruct.com/tala).

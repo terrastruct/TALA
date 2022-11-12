@@ -1,0 +1,73 @@
+tenant: Offsite Tenant {
+  style.shadow: true
+
+  accountant: Accountant
+  security: Security
+  janitor: Janitor
+}
+
+tenant.accountant -> Quickbooks
+
+auditors: Auditors
+
+auditors -> Quickbooks
+auditors -> IRS
+Quickbooks -> Clients
+
+dataroom: E335 Data Room {
+  style.shadow: true
+  style.fill: "#e9edef"
+  style.stroke-width: 2
+
+  whitelist: Whitelisted Server {
+    shape: rectangle
+    style.stroke-dash: 10
+    style.stroke: "#000E3D"
+
+    routing: Routing blocker
+    headers: Add header tokens
+  }
+
+  platform: Microsoft Windows Fleet {
+    style.stroke-dash: 4
+    style.stroke: "#000E3D"
+    build
+  }
+  whitelist <-> platform: Maintain connection {style.stroke-width: 4}
+}
+
+auditors -> dataroom.platform.build
+auditors -> dataroom.whitelist.routing
+tenant.accountants -> dataroom
+
+logging: Web based logger
+
+production: Data for prod {
+  style.shadow: true
+
+  network: Network availability {
+    style.stroke-dash: 10
+    style.stroke: "#000E3D"
+
+    instances: App instances {
+      style.multiple: true
+    }
+
+    db: App DBs {
+      shape: cylinder
+    }
+
+    secrets: AWS Secrets
+
+    containers: Docker containers
+
+    instances -> db
+    instances -> secrets
+    containers -> db
+    containers -> secrets
+  }
+}
+
+dataroom.whitelist.routing -> production.network.instances
+dataroom.whitelist.headers -> production.network.instances
+production.network.instances -> backups
