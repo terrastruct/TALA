@@ -22,8 +22,12 @@ You can see the `.d2` text for these in [./docs/d2](./docs/d2). Samples are
 
 ## Installation
 
+### Install script
+
+The most convenient way to install is through the install script.
+
 ```sh
-curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala --dryrun
+curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala --dry-run
 # If things look good, install for real.
 curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala
 ```
@@ -32,6 +36,16 @@ You can also find binaries
 [Releases](https://github.com/terarstruct/TALA/releases) page for Linux and MacOS, for
 both AMD and ARM. Download the appropriate one for your OS to a directory
 in your path. Windows coming soon.
+
+### macOS (Homebrew)
+
+If you're on macOS, you can alternatively install with `brew`. (the install script above
+does this automatically if you have `brew` installed).
+
+```sh
+brew tap terrastruct/d2
+brew install tala
+```
 
 ### Post-install
 
