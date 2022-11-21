@@ -27,6 +27,8 @@ You can see the `.d2` text for these in [./docs/d2](./docs/d2). Samples are
 The most convenient way to install is through the install script.
 
 ```sh
+# With --dry-run the install script will print the commands it will use
+# to install without actually installing so you know what it's going to do.
 curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala --dry-run
 # If things look good, install for real.
 curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala
