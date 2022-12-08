@@ -45,7 +45,7 @@ If you're on macOS, you can alternatively install with `brew`. (the install scri
 does this automatically if you have `brew` installed).
 
 ```sh
-brew tap terrastruct/d2
+brew tap terrastruct/tap
 brew install tala
 ```
 
