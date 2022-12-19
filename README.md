@@ -34,10 +34,9 @@ curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala --dry-run
 curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala
 ```
 
-You can also find binaries
-[Releases](https://github.com/terarstruct/TALA/releases) page for Linux and MacOS, for
-both AMD and ARM. Download the appropriate one for your OS to a directory
-in your path. Windows coming soon.
+You can also find binaries [Releases](https://github.com/terarstruct/TALA/releases) page
+for Linux, MacOS and Windows, for both AMD and ARM. Download the appropriate one for your
+OS to a directory in your path.
 
 ### macOS (Homebrew)
 
@@ -45,8 +44,7 @@ If you're on macOS, you can alternatively install with `brew`. (the install scri
 does this automatically if you have `brew` installed).
 
 ```sh
-brew tap terrastruct/tap
-brew install tala
+brew install terrastruct/tap/tala
 ```
 
 ### Post-install
