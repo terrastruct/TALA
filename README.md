@@ -66,6 +66,19 @@ setting the environment variable `D2_LAYOUT`.
 D2_LAYOUT=tala d2 in.d2 out.svg
 ```
 
+### Seeds
+
+Optimal placements of nodes that minimizes distance and crossings is an NP-hard problem.
+TALA searches with heuristics to get an approximation. This search space has some
+randomness at each step. Choosing a different seed for this randomness can have signficant
+impact on the overall layout, as it may converge on an entirely different one.
+
+For advanced usage of TALA, you may specify the seed to get a different layout:
+
+```d2
+d2 --layout tala --tala-seed 44 input.d2
+```
+
 ### Add API token (optional)
 
 You may skip this step if you are just evaluating.
