@@ -1,4 +1,10 @@
-# TALA
+<div align="center">
+  <img width="205" alt="TALA logo" src="https://user-images.githubusercontent.com/3120367/211999109-3b1ef11c-8efa-4473-aa8c-5ef43d7dc962.png">
+  <h1>
+    TALA
+  </h1>
+ </div>
+
 
 TALA is a diagram layout engine designed specifically for software architecture diagrams,
 though it works well in other domains too. TALA is closed-source (for now). This
