@@ -40,7 +40,7 @@ curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala --dry-run
 curl -fsSL https://d2lang.com/install.sh | sh -s -- --tala
 ```
 
-You can also find binaries [Releases](https://github.com/terarstruct/TALA/releases) page
+You can also find binaries [Releases](https://github.com/terrastruct/TALA/releases) page
 for Linux, MacOS and Windows, for both AMD and ARM. Download the appropriate one for your
 OS to a directory in your path.
 
