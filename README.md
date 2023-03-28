@@ -89,9 +89,9 @@ d2 --layout tala --tala-seed 44 input.d2
 
 ### Add API token (optional)
 
-#### As environment variable
-
 You may skip this step if you are just evaluating.
+
+#### As environment variable
 
 If you have an API token, copy and paste it into your environment variables. E.g.
 
