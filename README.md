@@ -89,12 +89,37 @@ d2 --layout tala --tala-seed 44 input.d2
 
 ### Add API token (optional)
 
+#### As environment variable
+
 You may skip this step if you are just evaluating.
 
 If you have an API token, copy and paste it into your environment variables. E.g.
 
 ```bash
 export TSTRUCT_TOKEN = "tstruct_..."
+```
+
+#### As config file
+
+You can also use a JSON file as config. The benefit to this is that when the TALA license
+expires and has to renew, it will swap out the key for you automatically in the background
+with the updated one.
+
+By default, TALA finds the configuration file at the following path:
+
+`$HOME/.config/tstruct/auth.json`:
+
+```json
+{
+  "api_token": "tstruct_xxx"
+}
+```
+
+You can change where this path is by configuring it with the following environment
+variable:
+
+```bash
+export TSTRUCT_AUTHFILE = /var/local/...
 ```
 
 ## License keys
