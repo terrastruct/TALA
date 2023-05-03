@@ -84,7 +84,7 @@ impact on the overall layout, as it may converge on an entirely different one.
 For advanced usage of TALA, you may specify the seed to get a different layout:
 
 ```d2
-d2 --layout tala --tala-seed 44 input.d2
+d2 --layout tala --tala-seeds 44 input.d2
 ```
 
 ### Add API token (optional)
