@@ -7,12 +7,16 @@
 
 
 TALA is a diagram layout engine designed specifically for software architecture diagrams,
-though it works well in other domains too. TALA is closed-source. This repository is
-primarily for installation instructions. You can also use this repository to report
-issues, ask questions, and request features.
+though it works well in other domains too.
+
+TALA is closed-source. This repository is primarily for installation instructions. You can
+also use this repository to report issues, ask questions, and request features.
 
 To learn more about TALA, please visit
-[https://terrastruct.com/tala](https://terrastruct.com/tala).
+[https://terrastruct.com/tala](https://terrastruct.com/tala). Note that this is a paid
+layout engine, which requires a license for any commercial use. The license is purchasable
+in that same link. TALA is free to evaluate, but without a license, will render with a
+watermark.
 
 To compare TALA with other layout engines, please visit
 [https://text-to-diagram.com](https://text-to-diagram.com/?a=d2&layout_a=tala&b=d2&layout_b=dagre&example=chess).
